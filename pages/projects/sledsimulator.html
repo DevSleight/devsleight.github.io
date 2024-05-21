@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Sled Simulator</title>
+        <link rel="stylesheet" type="text/css" href="../../css/projectstyle.css">
+        <link rel="stylesheet" href="../../scripts/styles/vs2015.css">
+        <script src="../../scripts/highlight.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="../../scripts/codeboxopenclose.js"></script>
+        <script>HideShowCodebox();</script>
+    </head>
+<body>
+
+<!-- HEADER WITH MENU -->
+<header>
+    <navigation-menu>
+    <ul class="shadow">
+        <li>
+            <a href="../../index.html" target="_self"> Home </a>
+        </li>
+        <li>
+            <a href="../../index.html#projects" target="_self"> Projects </a>
+        </li>
+        <li>
+            <a href="../about.html" target="_self"> About </a>
+        </li>
+        <li>
+            <a href="../about.html#experience" target="_self"> Experience </a>
+        </li>
+        <li>
+            <a href="../about.html#skills" target="_self"> Skills </a>
+        </li>
+    </ul>
+    </navigation-menu>
+</header>
+<!-- END HEADER -->
+<!-- PROFILE SECTION -->
+<div id=header class="headertint image-top" style="background-image: url('../../images/SledSimulatorBanner.png')">
+        <div id="project-logo" class="project-logo" style="background-image: url('../../images/SledSimulatorLogo.png')">
+        </div>
+        <div id="profile">
+            <div id="profile-image">
+                <a href="../../index.html">
+                    <img src="../../images/profilePic.png">
+                </a>
+            </div>
+            <p id="name">DevSleight</h1>
+            <p id="title">Junior programmer</h2>
+        <!-- SOCIAL MEDIA LIST -->
+        <ul class="social">
+            <li>
+                <!-- <a href="https://twitter.com/SleightDev" target="_blank" alt="twitter"> 
+                    <i class="twitter">
+                    </i>
+                </a> -->
+            </li>
+        </ul>
+        <!-- END SOCIAL MEDIA LIST -->
+        </div>
+</div>
+<!-- END PROFILE SECTION -->
+<div id="project" class="project-background" style="background-image: url('../../images/SledSimMapExampleBlur.png')">
+    <div id="project-container">
+        <h2>Project Overview</h2>
+        <p>Sled Simulator is a game powered by the Roblox Engine. In Sled Simulator the player has to earn currencies by sledding down the available maps and use that currency to upgrade their sleds, That way they reach further and further down the hill. It was inspired by games such as “Shopping cart hero” and “Learn to fly” while trying to avoid the stereotypical clicking genre that a lot of Roblox simulators stick to. Sled Simulator was created in 6 months but has been updated a great deal since then.</p>
+        
+        <h2>Game Info</h2>
+        <div id="game-info">
+            <div id="game-info-left">
+                <h3> Game link: <span class="li-answer"><a href="https://www.roblox.com/games/6279039046/Sled-Simulator-UPDATE-10-4" target="_blank">Sled Simulator</a></span></h3>
+                <h3>Visits: <span class="li-answer">62M+</span></h3>
+                <h3>Roles: <span class="li-answer">Programmer</span></h3>
+                <h3>Time: <span class="li-answer">6 Months</span></h3>
+                <h3>Date: <span class="li-answer">January 2021 - June 2021</span></h3>
+                <h3>Team Size: <span class="li-answer">3</span></h3>
+            </div>
+            <div id="game-info-right">
+                <h3>Genre: <span class="li-answer">Roblox Simulator</span></h3>
+                <h3>Engine: <span class="li-answer">Roblox Studio</span></h3>
+                <h3>Code Language: <span class="li-answer">Luau</span></h3>
+            </div>
+        </div>
+        
+        <h2>My Role</h2>
+        <p> I was the only programmer working on Sled Simulator and it was also my first Roblox project. That meant I had to learn while working on it. Roblox has great <a href="https://create.roblox.com/docs" target="_blank"> documentation </a> and resources available to learn from such as the developer forum and youtube tutorials but I still made some major mistakes. </p>
+        <p> I programmed all the systems in the game, for example sledding and earning currency, saving, leaderboards and unlocking sled parts. Most of the systems were also tied to the ui which I did the programming for as well. </p>
+
+        <h2> Gameplay </h2>
+        <p> Players start with a wooden board with very low health. They can quickly upgrade to the next tier. This way players learn the game loop as soon as possible without a tutorial. When sledding players can see their speed, distance, health, armor and boost left. If players are sledding together as a party they will see the same stats. </p>
+        <img src="../../images/SledSimSleddingExample.png" alt="Sledding example">
+
+        <h2>Live game</h2>
+        <p> Sled Simulator was updated with bug fixes, larger and smaller updates for years after release. Some of the larger updates were: </p>
+        <ul>
+            <li> Console update added support for controllers so the game was playable on console. The main difficulty with this update was making the ui usable and intractable in an intuitive way. </li>
+            <li> Party/group update which added a way to help friends by letting them sled with you on your sled. </li>
+            <li> Summer update added a completely new map and a bunch of new sled parts to unlock for a new currency. </li>
+            <li> Multiple seasonal events which added new sled parts to unlock for a limited time. These sleds were usually themed to the holiday. </li>
+        </ul>
+
+        <h2> Upgrading sleds </h2>
+        <p> Players can upgrade their sled's health, armor and boost, this also changes the look of the sled. To customize the visuals even more they can pick a trail and pet. </p>
+        <img src="../../images/SledSimGarageExample.png" alt="Garage example">
+
+        <p> To save and load players data such as unlocked and equipped sled, currencies and distance reached I used Roblox Datastores. The game saves players data at two different times, When a player leaves and during an autosave every 5 minutes. When too many players' data is being saved at once or when saving too often, sometimes Roblox drops the packages. This caused data loss for some players when they changed maps and the game had just autosaved. Players who left the game before the data was loaded could also experience data loss as it would sometimes overwrite the old data. </p>
+        
+        <p> In Sweet Sour's discord server the community can ask for help in recovering their lost items and currencies that occurred due to data loss. The saving system does not have backups so rollbacks are not possible therefore this has to be done manually. </p>
+        
+        <div id="codebox-buttonDiv">
+            <button class="codebox-button" onclick="HideShowCodebox('codebox')"> Saving code snippet </button>
+        </div>
+        <div id="codebox" style="max-height: 0px;">
+            <pre><code class="lua hljs">
+        -- Saving data
+        local playerServerStorage = playerDataServerStorage:FindFirstChild(tostring(playerID))
+        if not playerServerStorage then
+            warn("NO PLAYER SERVERSTORAGE FOUND, CANNOT SAVE?!")
+            return false
+        end
+    
+        -- SAVE MONEY, BOOSTERS AND TOTAL DISTANCE
+        local cleanLocalPlayerData = DeepCopyTable(cleanPlayerData)
+        local playerSaveStats = cleanLocalPlayerData
+        local playerStatsServerStorage = playerServerStorage:FindFirstChild("PlayerStats")
+        if playerStatsServerStorage then
+            local playerServerMoney = playerStatsServerStorage:FindFirstChild("Money")
+            if playerServerMoney then
+                playerSaveStats.money = math.floor(playerServerMoney.Value)
+            end
+            local playerServerMoneyBooster = playerStatsServerStorage:FindFirstChild("MoneyBooster")
+            if playerServerMoneyBooster then
+                playerSaveStats.moneyBoost = math.floor(playerServerMoneyBooster.Value)
+            end
+            local playerServerHealthBooster = playerStatsServerStorage:FindFirstChild("HealthBooster")
+            if playerServerHealthBooster then
+                playerSaveStats.healthBoost = math.floor(playerServerHealthBooster.Value)
+            end
+            
+            local playerServerEventCurrency = playerStatsServerStorage:FindFirstChild("EventCurrency")
+            if playerServerEventCurrency then
+                for _, childCurrency in ipairs(playerServerEventCurrency:GetChildren()) do
+                    playerSaveStats["eventCurrency"][childCurrency.Name] = childCurrency.Value
+                end
+            end
+    
+            local successSavedPlayerStats, errorMessageSavedPlayerStats = pcall(function()
+                playerStatsDatastore:UpdateAsync(playerID .. "_playerData", function(oldValue)
+                    local newValue = oldValue or cleanLocalPlayerData
+                    newValue = playerSaveStats
+                    print("NEWVALUE PLAYERDATA: ", newValue)
+                    return newValue
+                end)
+            end)
+            if successSavedPlayerStats then
+    
+            else
+                warn("Error saving player stats data: ", errorMessageSavedPlayerStats)
+                return false
+            end
+        end
+        -- SAVE TOTAL DISTANCE AT LEAVE
+        local playerTotalDistanceServer = playerStatsServerStorage:FindFirstChild("TotalDistance")
+        if playerTotalDistanceServer then
+            local successSavedTotalDistance, errorMessageSavedTotalDistance = pcall(function()
+                playerTotalDistanceDatastore:UpdateAsync(playerID .. "_totalDistance", function(oldValue)
+                    local newValue = oldValue or starterTotalDistance
+                    newValue = math.floor(playerTotalDistanceServer.Value)
+                    print("NEWVALUE TOTALDISTANCE: ", newValue)
+                    return newValue
+                end)
+            end)
+            if successSavedTotalDistance then
+    
+            else
+                warn("Error saving player stats data: ", errorMessageSavedTotalDistance)
+                return false
+            end
+        end
+            </code></pre>
+        </div>
+        
+        <h2>Cheaters</h2>
+        <p> Cheaters were a problem I had no experience with and quickly learned that they work fast. </p>
+        <p> Roblox default characters are client authorized and as such they can easily use character hacks such as fly and teleport. They can also send events with modified parameters. At release I did not know that characters who sit in Roblox premade seats and teleported brought the entire construction with them. Hackers used this to gain huge amounts of distance by teleporting. </p>
+        
+        <p> Another flaw at release was how the game dealt with purchases for ingame currency. When a player requested a purchase they sent an event with the part name and the price to the server which did not check that it was valid, only if they had enough of the correct currency. It also meant that players could send negative numbers to gain currency. This was solved soon after it was discovered and has not been a problem since. </p>
+        <p></p>
+        <div id="codebox-buttonDiv">
+            <button class="codebox-button" onclick="HideShowCodebox('codebox2')"> Speed/Teleport hacker check </button>
+        </div>
+        <div id="codebox2" style="max-height: 0px;">
+            <pre><code class="lua hljs">
+        ---- Cheater checks ----
+        local newPos = primaryPart.Position
+
+        local velocity = (newPos - oldPos) / deltaTime
+
+        -- set old pos to newpos AFTER velocity calculation
+        oldPos = newPos
+
+        -- Speed is in studs per second, stud/s
+        speed = velocity.Magnitude
+
+        -- Kick cheating players
+        if speed > speedToKick and primaryPart:GetAttribute("Preparing") ~= true then
+            EndRaceEarly(player)
+            player:Kick("Kicked for speed hacking")
+        end
+            </code></pre>
+        </div>
+        <p></p>
+    </div>
+</div>
+<!-- FOOTER -->
+<footer>
+    <div>
+        <p></p>
+    </div>
+</footer>
+<!-- END FOOTER -->
+</body>
+</html>

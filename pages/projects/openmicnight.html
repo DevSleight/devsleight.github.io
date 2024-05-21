@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Open Mic Night</title>
+        <link rel="stylesheet" type="text/css" href="../../css/projectstyle.css">
+        <link rel="stylesheet" href="../../scripts/styles/vs2015.css">
+        <script src="../../scripts/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="../../scripts/codeboxopenclose.js"></script>
+        <script>HideShowCodebox();</script>
+    </head>
+<body>
+
+<!-- HEADER WITH MENU -->
+<header>
+    <navigation-menu>
+    <ul class="shadow">
+        <li>
+            <a href="../../index.html" target="_self"> Home </a>
+        </li>
+        <li>
+            <a href="../../index.html#projects" target="_self"> Projects </a>
+        </li>
+        <li>
+            <a href="../about.html" target="_self"> About </a>
+        </li>
+        <li>
+            <a href="../about.html#experience" target="_self"> Experience </a>
+        </li>
+        <li>
+            <a href="../about.html#skills" target="_self"> Skills </a>
+        </li>
+    </ul>
+    </navigation-menu>
+</header>
+<!-- END HEADER -->
+<!-- PROFILE SECTION -->
+<div id=header class="headertint image-top" style="background-image: url('../../images/OMNStage.png')">
+        <div id="project-logo" class="project-logo" style="background-image: url('../../images/OMNIconBlankSpace.png')">
+        </div>
+        <div id="profile">
+            <div id="profile-image">
+                <a href="../../index.html">
+                    <img src="../../images/profilePic.png">
+                </a>
+            </div>
+            <p id="name">DevSleight</h1>
+            <p id="title">Junior programmer</h2>
+        <!-- SOCIAL MEDIA LIST -->
+        <ul class="social">
+            <li>
+                <!-- <a href="https://twitter.com/SleightDev" target="_blank" alt="twitter"> 
+                    <i class="twitter">
+                    </i>
+                </a> -->
+            </li>
+        </ul>
+        <!-- END SOCIAL MEDIA LIST -->
+        </div>
+</div>
+<!-- END PROFILE SECTION -->
+<div id="project" class="project-background" style="background-image: url('../../images/BrickwallDark.png')">
+    <div id="project-container">
+        <h2>Project Overview</h2>
+        <p> Open Mic Night is a social game powered by the Roblox Engine. Inspired by open mic live shows we wanted to create a place where players could display their talent and humor to others on the platform. Roblox had just released voice chat so this was the opportune moment to create Open Mic Night. The project was initially created in two weeks but has since been updated multiple times. </p>
+        
+        <h2>Game Info</h2>
+        <div id="game-info">
+            <div id="game-info-left">
+                <h3> Game link: <span class="li-answer"><a href="https://www.roblox.com/games/8044000698/Open-Mic-Night-VOICE-CHAT">Open Mic Night</a></span></h3>
+                <h3>Visits: <span class="li-answer">17M+</span></h3>
+                <h3>Roles: <span class="li-answer">Programmer</span></h3>
+                <h3>Time: <span class="li-answer">2 weeks</span></h3>
+                <h3>Date: <span class="li-answer">November 2021 - November 2021</span></h3>
+                <h3>Team Size: <span class="li-answer">2</span></h3>
+            </div>
+            <div id="game-info-right">
+                <h3>Genre: <span class="li-answer">Social hangout</span></h3>
+                <h3>Engine: <span class="li-answer">Roblox Studio</span></h3>
+                <h3>Code Language: <span class="li-answer">Luau</span></h3>
+            </div>
+        </div>
+        
+        <h2>My Role</h2>
+        <p> I was the only programmer working on Open Mic Night but decided that I wanted to try using more modules that already existed on Roblox than programming everything from scratch. </p>
+        
+        <h2> Gameplay </h2>
+        <p> The original version only had a couple of features. Queuing to get on stage, liking and disliking the performance, earning coins and buying tomatoes to throw at the performer. The plan was to move the voice chat listener and lock people from moving. But that also affected hearing the audience and there was no way to mute players from the server. We decided that it was more fun to let people walk around. Roblox also lets you use your bought items across every game and letting players see and share their characters is a big part of Roblox. </p>
+        <img src="../../images/OMNOnStageExample.png" alt="On stage example">
+
+        <h2> Saving data </h2>
+        <p> Since Open Mic Night was a fairly simple project and we had dataloss occurrences in Sled Simulator I decided this was a good opportunity to figure out a better way of handling saving. Instead of reinventing the wheel I tried two different datastore modules called <a href="https://kampfkarren.github.io/Roblox/"> Datastore2 </a> and <a href="https://madstudioroblox.github.io/ProfileService/"> ProfileService.</a> Out of these I found ProfileService easiest to use and have not run into any data loss since. </p>
+
+        <h2> Moderation </h2>
+        <p> After Open Mic Night turned more towards a social game it became clear that moderation would be needed. For this I made a panel with functions that moderators could use to easily deal with rule breakers and have fun with. The moderator panel has sections for banning, teleporting, modifying their and others' character, x-ray and more. </p>
+        <img src="../../images/OMNModPanelExample.png" alt="Mod panel example">
+        <p> This also meant dealing with unhappy players and moderators who acted on their own outside of the set guidelines and the situations they caused. </p>
+    </div>
+</div>
+<!-- FOOTER -->
+<footer>
+    <div>
+        <p></p>
+    </div>
+</footer>
+<!-- END FOOTER -->
+</body>
+</html>
