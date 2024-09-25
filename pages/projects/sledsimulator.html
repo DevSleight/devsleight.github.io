@@ -63,13 +63,13 @@
 <div id="project" class="project-background" style="background-image: url('../../images/SledSimMapExampleBlur.png')">
     <div id="project-container">
         <h2>Project Overview</h2>
-        <p>Sled Simulator is a game powered by the Roblox Engine. In Sled Simulator the player has to earn currencies by sledding down the available maps and use that currency to upgrade their sleds, That way they reach further and further down the hill. It was inspired by games such as “Shopping cart hero” and “Learn to fly” while trying to avoid the stereotypical clicking genre that a lot of Roblox simulators stick to. Sled Simulator was created in 6 months but has been updated a great deal since then.</p>
+        <p>Sled Simulator is a game powered by the Roblox Engine where players earn currency by sledding down various maps, using that currency to upgrade their sleds and progress further down the hill. Inspired by games like "Shopping Cart Hero" and "Learn to Fly," it aims to break away from the stereotypical clicking mechanics prevalent in many Roblox simulators. Developed over six months, Sled Simulator has undergone numerous updates since its initial release giving me experience maintaining a live game.</p>
         
         <h2>Game Info</h2>
         <div id="game-info">
             <div id="game-info-left">
                 <h3> Game link: <span class="li-answer"><a href="https://www.roblox.com/games/6279039046/Sled-Simulator-UPDATE-10-4" target="_blank">Sled Simulator</a></span></h3>
-                <h3>Visits: <span class="li-answer">62M+</span></h3>
+                <h3>Visits: <span class="li-answer">65M+</span></h3>
                 <h3>Roles: <span class="li-answer">Programmer</span></h3>
                 <h3>Time: <span class="li-answer">6 Months</span></h3>
                 <h3>Date: <span class="li-answer">January 2021 - June 2021</span></h3>
@@ -83,15 +83,15 @@
         </div>
         
         <h2>My Role</h2>
-        <p> I was the only programmer working on Sled Simulator and it was also my first Roblox project. That meant I had to learn while working on it. Roblox has great <a href="https://create.roblox.com/docs" target="_blank"> documentation </a> and resources available to learn from such as the developer forum and youtube tutorials but I still made some major mistakes. </p>
-        <p> I programmed all the systems in the game, for example sledding and earning currency, saving, leaderboards and unlocking sled parts. Most of the systems were also tied to the ui which I did the programming for as well. </p>
+        <p> Sled Simulator was my first Roblox project and I was the sole programmer, which meant I had to learn on the job. While Roblox offers excellent <a href="https://create.roblox.com/docs" target="_blank"> documentation </a> and resources, including the developer forum and YouTube tutorials, I still made some significant mistakes since this was my first time working with an online multiplayer environment. </p>
+        <p> I implemented all the core systems in the game, such as sledding mechanics, currency earning, saving progress, leaderboards, and unlocking sled parts. I also handled the programming for the user interface, tying most of these systems to the UI elements. </p>
 
         <h2> Gameplay </h2>
-        <p> Players start with a wooden board with very low health. They can quickly upgrade to the next tier. This way players learn the game loop as soon as possible without a tutorial. When sledding players can see their speed, distance, health, armor and boost left. If players are sledding together as a party they will see the same stats. </p>
+        <p> Players begin with a wooden board that has very low health but can quickly upgrade to the next tier. This design allows players to learn the game loop immediately, without the need for a tutorial. While sledding, players can see their speed, distance, health, armor, and remaining boost. If they are sledding together as a party, they will share the same stats for a more cohesive experience. </p>
         <img src="../../images/SledSimSleddingExample.png" alt="Sledding example">
 
         <h2>Live game</h2>
-        <p> Sled Simulator was updated with bug fixes, larger and smaller updates for years after release. Some of the larger updates were: </p>
+        <p> Sled Simulator was updated with larger, smaller updates and bug fixes for years after release. Some of the larger updates include: </p>
         <ul>
             <li> Console update added support for controllers so the game was playable on console. The main difficulty with this update was making the ui usable and intractable in an intuitive way. </li>
             <li> Party/group update which added a way to help friends by letting them sled with you on your sled. </li>
@@ -100,10 +100,10 @@
         </ul>
 
         <h2> Upgrading sleds </h2>
-        <p> Players can upgrade their sled's health, armor and boost, this also changes the look of the sled. To customize the visuals even more they can pick a trail and pet. </p>
+        <p> Players can upgrade their sled's health, armor, and boost, which also alters its appearance. Additionally, they can further customize the visuals by selecting a trail and a pet to accompany them on their adventures. </p>
         <img src="../../images/SledSimGarageExample.png" alt="Garage example">
 
-        <p> To save and load players data such as unlocked and equipped sled, currencies and distance reached I used Roblox Datastores. The game saves players data at two different times, When a player leaves and during an autosave every 5 minutes. When too many players' data is being saved at once or when saving too often, sometimes Roblox drops the packages. This caused data loss for some players when they changed maps and the game had just autosaved. Players who left the game before the data was loaded could also experience data loss as it would sometimes overwrite the old data. </p>
+        <p> To save and load player data, such as unlocked and equipped sleds, currencies, and distance reached, I used Roblox DataStores. The game saves data when the player leaves the game and during an autosave every five minutes. However, when too many players' data is being saved simultaneously or if saves occur too frequently, Roblox can drop some packages. This occasionally led to data loss for players, particularly if they changed maps right after an autosave. Additionally, players who left the game before their data was fully loaded could experience data loss, as it sometimes resulted in overwriting older data. </p>
         
         <p> In Sweet Sour's discord server the community can ask for help in recovering their lost items and currencies that occurred due to data loss. The saving system does not have backups so rollbacks are not possible therefore this has to be done manually. </p>
         
@@ -182,9 +182,10 @@
         
         <h2>Cheaters</h2>
         <p> Cheaters were a problem I had no experience with and quickly learned that they work fast. </p>
-        <p> Roblox default characters are client authorized and as such they can easily use character hacks such as fly and teleport. They can also send events with modified parameters. At release I did not know that characters who sit in Roblox premade seats and teleported brought the entire construction with them. Hackers used this to gain huge amounts of distance by teleporting. </p>
+        <p>Roblox default characters are client authorized, making it easy for players to use hacks like flying and teleporting. They can also send events with modified parameters. At the time of release, I wasn't aware that characters sitting in Roblox's premade seats would teleport the entire structure with them because sitting in a seat gives the player ownership of that structure. Hackers exploited this to gain significant distance by teleporting, which posed a challenge for gameplay balance. </p>
         
-        <p> Another flaw at release was how the game dealt with purchases for ingame currency. When a player requested a purchase they sent an event with the part name and the price to the server which did not check that it was valid, only if they had enough of the correct currency. It also meant that players could send negative numbers to gain currency. This was solved soon after it was discovered and has not been a problem since. </p>
+        <p> 
+            Another flaw at release was how the game handled purchases using ingame currency. When a player requested a purchase, they sent an event with the part name and price to the server, which only checked if they had enough of the correct currency without validating the request. This allowed players to send negative numbers to gain currency. Fortunately, this issue was addressed shortly after it was discovered, and it has not been a problem since. </p>
         <p></p>
         <div id="codebox-buttonDiv">
             <button class="codebox-button" onclick="HideShowCodebox('codebox2')"> Speed/Teleport hacker check </button>
